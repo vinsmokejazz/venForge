@@ -1,6 +1,8 @@
 import { PerspectiveCamera } from "@react-three/drei"
 import { Canvas } from "@react-three/fiber"
 import HackerRoom from "../components/HackerRoom"
+import { Suspense } from "react"
+import CanvasLoader from "../components/CanvasLoader"
 
 const Hero=()=>{
 
@@ -16,8 +18,17 @@ const Hero=()=>{
 
       <div className="w-full h-full absolute inset-0">
         <Canvas className="w-full h-full">
+          <Suspense fallback={<CanvasLoader/>}>
+
+          
+
           <PerspectiveCamera makeDefault position={[0,0,30]}/>
-          <HackerRoom/>
+
+          <HackerRoom scale= {2} position={[0,0,0]} rotation={[0,5,0]} />
+          <ambientLight intensity={15} />
+          <directionalLight position={[10,10,10]} intensity={4} />
+
+          </Suspense>
         </Canvas>
 
       </div>
