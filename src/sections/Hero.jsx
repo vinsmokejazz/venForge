@@ -13,46 +13,43 @@ const Hero = () => {
   const isTablet = useMediaQuery({ query: '(max-width: 1024px) and (min-width: 768px)' });
 
 
-  const x = useControls('HackerRoom', {
-    positionX: {
-      value: 2.5,
-      min: -10,
-      max: 10
-    },
-    positionY: {
-      value: 2.5,
-      min: -10,
-      max: 10
-    },
-    positionZ: {
-      value: 2.5,
-      min: -10,
-      max: 10
-    },
-    rotationX: {
-      value: 2.5,
-      min: -10,
-      max: 10
-    },
-    rotationY: {
-      value: 2.5,
-      min: -10,
-      max: 10
-    },
-    rotationZ: {
-      value: 2.5,
-      min: -10,
-      max: 10
-    },
-    scale: {
-      value: 2,
-      min: 0.1,
-      max: 10
-    }
-
-
-
-  })
+  // const x = useControls('HackerRoom', {
+  //   positionX: {
+  //     value: 2.5,
+  //     min: -10,
+  //     max: 10
+  //   },
+  //   positionY: {
+  //     value: 2.5,
+  //     min: -10,
+  //     max: 10
+  //   },
+  //   positionZ: {
+  //     value: 2.5,
+  //     min: -10,
+  //     max: 10
+  //   },
+  //   rotationX: {
+  //     value: 2.5,
+  //     min: -10,
+  //     max: 10
+  //   },
+  //   rotationY: {
+  //     value: 2.5,
+  //     min: -10,
+  //     max: 10
+  //   },
+  //   rotationZ: {
+  //     value: 2.5,
+  //     min: -10,
+  //     max: 10
+  //   },
+  //   scale: {
+  //     value: 2,
+  //     min: 0.1,
+  //     max: 10
+  //   }
+  // })
 
   return (
     <section className="min-h-screen w-full flex flex-col relative">
