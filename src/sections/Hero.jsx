@@ -5,13 +5,15 @@ import { Suspense } from "react"
 import CanvasLoader from "../components/CanvasLoader"
 import { Leva, useControls } from "leva"
 import { useMediaQuery } from "react-responsive"
+import Target from "../components/Target"
 
-const Hero=()=>{
+const Hero = () => {
 
-  const ismobile=useMediaQuery({maxWidth:768})
+  const ismobile = useMediaQuery({ maxWidth: 768 })
+  const isTablet = useMediaQuery({ query: '(max-width: 1024px) and (min-width: 768px)' });
 
 
-  const x =useControls('HackerRoom',{
+  const x = useControls('HackerRoom', {
     positionX: {
       value: 2.5,
       min: -10,
@@ -42,17 +44,17 @@ const Hero=()=>{
       min: -10,
       max: 10
     },
-    scale :{
-      value:2,
-      min:0.1,
-      max:10
-   }
+    scale: {
+      value: 2,
+      min: 0.1,
+      max: 10
+    }
 
 
 
   })
 
-  return(
+  return (
     <section className="min-h-screen w-full flex flex-col relative">
 
       <div className="w-full mx-auto flex flex-col sm:mt-36 mt-20 c-space gap-3">
@@ -63,25 +65,28 @@ const Hero=()=>{
       </div>
 
       <div className="w-full h-full absolute inset-0">
-        <Leva/>
+        <Leva />
         <Canvas className="w-full h-full">
-          <Suspense fallback={<CanvasLoader/>}>
+          <Suspense fallback={<CanvasLoader />}>
 
-          
 
-          <PerspectiveCamera makeDefault position={[0,0,30]}/>
 
-          <HackerRoom 
-           scale= {ismobile? 2:3.5} 
-           position={ismobile?[-0.3,1.5,0.3]:[-0.3,-6.5,0.3]} 
-           rotation={[0,5,0]} 
-           />
-           <group>
-            
-           </group>
+            <PerspectiveCamera makeDefault position={[0, 0, 30]} />
 
-          <ambientLight intensity={15} />
-          <directionalLight position={[10,10,10]} intensity={4} />
+            <HackerRoom
+              scale={ismobile ? 2 : 3.5}
+              position={ismobile ? [-0.3, 1.5, 0.3] : [-0.3, -6.5, 0.3]}
+              rotation={[0, 5, 0]}
+            />
+            <group>
+              <Target position={ismobile ? [-6, -1, 0] : [-12, -10, 3]}
+                scale={ismobile ? 1 : 1.4}
+              />
+              <ambientLight intensity={-15} />
+            </group>
+
+            <ambientLight intensity={15} />
+            <directionalLight position={[10, 10, 10]} intensity={4} />
 
           </Suspense>
         </Canvas>
@@ -89,7 +94,7 @@ const Hero=()=>{
       </div>
 
     </section>
-  ) 
+  )
 
 }
 
