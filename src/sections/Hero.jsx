@@ -74,13 +74,20 @@ const Hero = () => {
             <PerspectiveCamera makeDefault position={[0, 0, 30]} />
 
             <HackerRoom
-              scale={ismobile ? 2 : 3.5}
-              position={ismobile ? [-0.3, 1.5, 0.3] : [-0.3, -6.5, 0.3]}
+              scale={ismobile ? 2 : isTablet? 2.8: 3.5}
+              position={ismobile ? 
+                [-0.3, 1.5, 0.3] : 
+                isTablet? [-0.3,-3.5,0.3]
+                : [-0.3, -6.5, 0.3]}
               rotation={[0, 5, 0]}
             />
+
+
             <group>
-              <Target position={ismobile ? [-6, -1, 0] : [-12, -10, 3]}
-                scale={ismobile ? 1 : 1.4}
+              <Target position={ismobile ? [-6, -1, 0] :
+              isTablet ? [-9,-6,2]
+              : [-12, -10, 3]}
+                scale={ismobile ? 1 : isTablet? 1.2 : 1.4}
               />
               <ambientLight intensity={-15} />
             </group>
