@@ -7,6 +7,7 @@ import { Leva, useControls } from "leva"
 import { useMediaQuery } from "react-responsive"
 import Target from "../components/Target"
 import ReactLogo from "../components/ReactLogo"
+import StyleKeyBoard from "../components/StyleKeyBoard"
 
 const Hero = () => {
 
@@ -74,9 +75,9 @@ const Hero = () => {
             <HackerRoom
               scale={ismobile ? 2 : isTablet ? 2.8 : 3.5}
               position={ismobile ?
-                [-0.3, 1.5, 0.3] :
+                [-0.3, 1, 0.3] :
                 isTablet ? [-0.3, -3.5, 0.3]
-                  : [-0.3, -6.5, 0.3]}
+                  : [-0.3, -7, 0.3]}
               rotation={[0, 5, 0]}
             />
 
@@ -97,6 +98,18 @@ const Hero = () => {
                     : [15, 5, 5]
               }
                 scale={ismobile ? 0.5 : isTablet ? 0.6 : 0.8} />
+
+                <StyleKeyBoard position={
+                ismobile
+                  ? [6, 0, 5]
+                  : isTablet
+                    ? [10, 3.5, 5]
+                    : [15, -8, 5]
+              } rotation={[1,7,0]}
+
+              scale={ismobile ? 0.5 : isTablet ? 0.6 : 0.8}
+
+                />
             </group>
 
             <ambientLight intensity={15} />
