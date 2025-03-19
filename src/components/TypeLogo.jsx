@@ -8,7 +8,7 @@ const TypeLogo = (props) => {
   const { nodes, materials } = useGLTF('models/typsc.glb')
   const targetRef = useRef()
   const floatRef = useRef()
-  const responsiveScale = props.ismobile ? 1.3 : props.isTablet ? 1.2 : 1.616
+  const responsiveScale = props.ismobile ? 1.3 : props.isTablet ? 1.5 : 1.616
 
   // Smooth float animation
   useGSAP(() => {

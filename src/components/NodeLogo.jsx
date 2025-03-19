@@ -4,7 +4,7 @@ import { Float, useGLTF } from '@react-three/drei'
 const NodeLogo=(props)=>{
   const { nodes, materials } = useGLTF('/public/models/node.glb')
   return (
-    <Float {...props} dispose={null}>
+    <Float {...props} dispose={null} floatIntensity={1.5}>
       <mesh
         castShadow
         receiveShadow

@@ -11,6 +11,7 @@ import StyleKeyBoard from "../components/StyleKeyBoard"
 import SolLogo from "../components/SolLogo"
 import NodeLogo from "../components/NodeLogo"
 import TypeLogo from "../components/TypeLogo"
+import Cube from "../components/Cube"
 
 const Hero = () => {
 
@@ -76,9 +77,9 @@ const Hero = () => {
             <PerspectiveCamera makeDefault position={[0, 0, 30]} />
 
             <HackerRoom
-              scale={ismobile ? 2 : isTablet ? 2.8 : 3.5}
+              scale={ismobile ? 2.3 : isTablet ? 2.8 : 3.5}
               position={ismobile ?
-                [-0.3, 1, 0.3] :
+                [-0.3, 0, 0.3] :
                 isTablet ? [-0.3, -3.5, 0.3]
                   : [-0.3, -7, 0.3]}
               rotation={[0, 5, 0]}
@@ -87,7 +88,7 @@ const Hero = () => {
 
 <group>
   <TypeLogo
-    position={ismobile ? [-6, -0.8, 0] : isTablet ? [-9, -4.7, 2] : [-12, -9, 3]}
+    position={ismobile ? [-7, -0.8, 0] : isTablet ? [-10, -4.7, 2] : [-15, -9, 3]}
     ismobile={ismobile}
     isTablet={isTablet}
     rotation={[0, Math.PI/4, 0]}
@@ -95,12 +96,12 @@ const Hero = () => {
   <ambientLight intensity={-15} />
 
   <ReactLogo 
-    position={ismobile ? [6, 6, 5] : isTablet ? [10, 3.5, 5] : [15, 5, 5]}
+    position={ismobile ? [6, 6.9, 5] : isTablet ? [10, 5.6, 5] : [15, 5, 5]}
     scale={ismobile ? 0.5 : isTablet ? 0.6 : 0.8}
   />
 
   <StyleKeyBoard 
-    position={ismobile ? [6, 0, 5] : isTablet ? [10, -3.5, 5] : [15, -8, 5]}
+    position={ismobile ? [6, -1, 5] : isTablet ? [10, -3.5, 5] : [15, -8, 5]}
     rotation={[1, 7, 0]}
     scale={ismobile ? 0.45 : isTablet ? 0.6 : 0.8}
   />
@@ -116,7 +117,7 @@ const Hero = () => {
     rotation={[1.1, Math.PI/6, 0]}
     scale={
       ismobile 
-        ? 0.55 
+        ? 0.7
         : isTablet 
         ? 0.8  
         : 1.2
@@ -134,12 +135,15 @@ const Hero = () => {
     rotation={[0, 0, -0.5]}
     scale={
       ismobile 
-        ? 2.5
+        ? 3
         : isTablet 
         ? 4   
         : 5.3   
     }
   />
+
+  <Cube  position={ismobile ? [-6, 7.8, 5] : isTablet ? [-10, 6, 5] : [-16, 5, 5]}
+    scale={ismobile ? 0.6 : isTablet ? 0.8 : 1} />
 </group>
 
             <ambientLight intensity={15} />
