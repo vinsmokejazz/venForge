@@ -3,7 +3,6 @@ import { Canvas } from "@react-three/fiber"
 import HackerRoom from "../components/HackerRoom"
 import { Suspense } from "react"
 import CanvasLoader from "../components/CanvasLoader"
-import { Leva, useControls } from "leva"
 import { useMediaQuery } from "react-responsive"
 import Target from "../components/Target"
 import ReactLogo from "../components/ReactLogo"
@@ -12,151 +11,49 @@ import SolLogo from "../components/SolLogo"
 import NodeLogo from "../components/NodeLogo"
 import TypeLogo from "../components/TypeLogo"
 import Cube from "../components/Cube"
+import { calculateSizes } from "../constants"
 
 const Hero = () => {
-
-  const ismobile = useMediaQuery({ maxWidth: 768 })
-  const isTablet = useMediaQuery({ query: '(max-width: 1024px) and (min-width: 768px)' });
-
-
-  // const x = useControls('HackerRoom', {
-  //   positionX: {
-  //     value: 2.5,
-  //     min: -10,
-  //     max: 10
-  //   },
-  //   positionY: {
-  //     value: 2.5,
-  //     min: -10,
-  //     max: 10
-  //   },
-  //   positionZ: {
-  //     value: 2.5,
-  //     min: -10,
-  //     max: 10
-  //   },
-  //   rotationX: {
-  //     value: 2.5,
-  //     min: -10,
-  //     max: 10
-  //   },
-  //   rotationY: {
-  //     value: 2.5,
-  //     min: -10,
-  //     max: 10
-  //   },
-  //   rotationZ: {
-  //     value: 2.5,
-  //     min: -10,
-  //     max: 10
-  //   },
-  //   scale: {
-  //     value: 2,
-  //     min: 0.1,
-  //     max: 10
-  //   }
-  // })
+  const isSmall = useMediaQuery({ maxWidth: 480 }) // Added small screen detection
+  const isMobile = useMediaQuery({ maxWidth: 768 })
+  const isTablet = useMediaQuery({ query: '(max-width: 1024px) and (min-width: 768px)' })
+  const responsiveSizes = calculateSizes(isSmall, isMobile, isTablet)
 
   return (
     <section className="min-h-screen w-full flex flex-col relative">
-
+      
       <div className="w-full mx-auto flex flex-col sm:mt-36 mt-20 c-space gap-3">
-        <p className="sm:text-3xl text-2xl font-medium text-white text-center font-generalsans">Hi, I am Venu Prasad...
+        <p className="sm:text-3xl text-2xl font-medium text-white text-center font-generalsans">
+          Hi, I am Venu Prasad...
           <span className="waving-hand">👋</span>
         </p>
         <p className="hero_tag text-gray_gradient">Building Products!</p>
       </div>
 
       <div className="w-full h-full absolute inset-0">
-        <Leva />
         <Canvas className="w-full h-full">
           <Suspense fallback={<CanvasLoader />}>
-
-
-
             <PerspectiveCamera makeDefault position={[0, 0, 30]} />
+            
+            <HackerRoom {...responsiveSizes.HackerRoom} />
 
-            <HackerRoom
-              scale={ismobile ? 2.3 : isTablet ? 2.8 : 3.5}
-              position={ismobile ?
-                [-0.3, 0, 0.3] :
-                isTablet ? [-0.3, -3.5, 0.3]
-                  : [-0.3, -7, 0.3]}
-              rotation={[0, 5, 0]}
-            />
-
-
-<group>
-  <TypeLogo
-    position={ismobile ? [-7, -0.8, 0] : isTablet ? [-10, -4.7, 2] : [-15, -9, 3]}
-    ismobile={ismobile}
-    isTablet={isTablet}
-    rotation={[0, Math.PI/4, 0]}
-  />
-  <ambientLight intensity={-15} />
-
-  <ReactLogo 
-    position={ismobile ? [6, 6.9, 5] : isTablet ? [10, 5.6, 5] : [15, 5, 5]}
-    scale={ismobile ? 0.5 : isTablet ? 0.6 : 0.8}
-  />
-
-  <StyleKeyBoard 
-    position={ismobile ? [6, -1, 5] : isTablet ? [10, -3.5, 5] : [15, -8, 5]}
-    rotation={[1, 7, 0]}
-    scale={ismobile ? 0.45 : isTablet ? 0.6 : 0.8}
-  />
-
-  <SolLogo 
-    position={
-      ismobile 
-        ? [-3.1, 4.5, 5]  
-        : isTablet 
-        ? [-5, 2.5, 3]     
-        : [-7, 1, 1.5]    
-    }
-    rotation={[1.1, Math.PI/6, 0]}
-    scale={
-      ismobile 
-        ? 0.7
-        : isTablet 
-        ? 0.8  
-        : 1.2
-    }
-  />
-
-  <NodeLogo  
-    position={
-      ismobile 
-        ? [3.4, 2.5, 5]   
-        : isTablet 
-        ? [5, -1, 3]      
-        : [7, -3, 1]      
-    }
-    rotation={[0, 0, -0.5]}
-    scale={
-      ismobile 
-        ? 3
-        : isTablet 
-        ? 4   
-        : 5.3   
-    }
-  />
-
-  <Cube  position={ismobile ? [-6, 7.8, 5] : isTablet ? [-10, 6, 5] : [-16, 5, 5]}
-    scale={ismobile ? 0.6 : isTablet ? 0.8 : 1} />
-</group>
+            <group>
+              <TypeLogo {...responsiveSizes.TypeLogo} />
+              <ambientLight intensity={-15} />
+              <ReactLogo {...responsiveSizes.ReactLogo} />
+              <StyleKeyBoard {...responsiveSizes.StyleKeyBoard} />
+              <SolLogo {...responsiveSizes.SolLogo} />
+              <NodeLogo {...responsiveSizes.NodeLogo} />
+              <Cube {...responsiveSizes.Cube} />
+            </group>
 
             <ambientLight intensity={15} />
             <directionalLight position={[10, 10, 10]} intensity={4} />
-
           </Suspense>
         </Canvas>
-
       </div>
-
     </section>
   )
-
 }
 
 export default Hero

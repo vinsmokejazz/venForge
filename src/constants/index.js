@@ -247,16 +247,73 @@ export const myProjects = [
 ];
 
 export const calculateSizes = (isSmall, isMobile, isTablet) => {
+  const getResponsiveProp = (mobileVal, tabletVal, desktopVal) => {
+    return isSmall ? mobileVal : isMobile ? mobileVal : isTablet ? tabletVal : desktopVal;
+  };
+
   return {
-    deskScale: isSmall ? 0.05 : isMobile ? 0.06 : 0.065,
-    deskPosition: isMobile ? [0.5, -4.5, 0] : [0.25, -5.5, 0],
-    cubePosition: isSmall ? [4, -5, 0] : isMobile ? [5, -5, 0] : isTablet ? [5, -5, 0] : [9, -5.5, 0],
-    reactLogoPosition: isSmall ? [3, 4, 0] : isMobile ? [5, 4, 0] : isTablet ? [5, 4, 0] : [12, 3, 0],
-    ringPosition: isSmall ? [-5, 7, 0] : isMobile ? [-10, 10, 0] : isTablet ? [-12, 10, 0] : [-24, 10, 0],
-    targetPosition: isSmall ? [-5, -10, -10] : isMobile ? [-9, -10, -10] : isTablet ? [-11, -7, -10] : [-13, -13, -10],
+    HackerRoom: {
+      scale: getResponsiveProp(2.3, 2.8, 3.5),
+      position: getResponsiveProp(
+        [-0.3, 0, 0.3],
+        [-0.3, -3.5, 0.3],
+        [-0.3, -7, 0.3]
+      ),
+      rotation: [0, 5, 0]
+    },
+    TypeLogo: {
+      position: getResponsiveProp(
+        [-7, -0.8, 0],
+        [-10, -4.7, 2],
+        [-15, -9, 3]
+      ),
+      rotation: [0, Math.PI/4, 0]
+    },
+    ReactLogo: {
+      position: getResponsiveProp(
+        [6, 6.9, 5],
+        [10, 5.6, 5],
+        [15, 5, 5]
+      ),
+      scale: getResponsiveProp(0.5, 0.6, 0.8)
+    },
+    StyleKeyBoard: {
+      position: getResponsiveProp(
+        [6, -1, 5],
+        [10, -3.5, 5],
+        [15, -8, 5]
+      ),
+      scale: getResponsiveProp(0.45, 0.6, 0.8),
+      rotation: [1, 7, 0]
+    },
+    SolLogo: {
+      position: getResponsiveProp(
+        [-3.1, 4.5, 5],
+        [-5, 2.5, 3],
+        [-7, 1, 1.5]
+      ),
+      scale: getResponsiveProp(0.7, 0.8, 1.2),
+      rotation: [1.1, Math.PI/6, 0]
+    },
+    NodeLogo: {
+      position: getResponsiveProp(
+        [3.4, 2.5, 5],
+        [5, -1, 3],
+        [7, -3, 1]
+      ),
+      scale: getResponsiveProp(3, 4, 5.3),
+      rotation: [0, 0, -0.5]
+    },
+    Cube: {
+      position: getResponsiveProp(
+        [-6, 7.8, 5],
+        [-10, 6, 5],
+        [-16, 5, 5]
+      ),
+      scale: getResponsiveProp(0.6, 0.8, 1)
+    }
   };
 };
-
 export const workExperiences = [
   {
     id: 1,
