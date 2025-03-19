@@ -8,6 +8,7 @@ import { useMediaQuery } from "react-responsive"
 import Target from "../components/Target"
 import ReactLogo from "../components/ReactLogo"
 import StyleKeyBoard from "../components/StyleKeyBoard"
+import SolLogo from "../components/SolLogo"
 
 const Hero = () => {
 
@@ -108,6 +109,17 @@ const Hero = () => {
               } rotation={[1,7,0]}
 
               scale={ismobile ? 0.5 : isTablet ? 0.6 : 0.8}
+
+                />
+
+                <SolLogo position={
+                ismobile
+                  ? [6, 0, 5]
+                  : isTablet
+                    ? [10, 3.5, 5]
+                    : [-5, -2, 1]
+              } rotation={[1,Math.PI/7,0]}
+              scale={ismobile ? 0.5 : isTablet ? 0.6 : 1.2}
 
                 />
             </group>
