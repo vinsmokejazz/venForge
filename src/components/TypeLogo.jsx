@@ -3,7 +3,7 @@ import React, { useRef } from 'react'
 import { useGLTF } from '@react-three/drei'
 
 const TypeLogo=(props)=> {
-  const { nodes, materials } = useGLTF('/typsc.glb')
+  const { nodes, materials } = useGLTF('models/typsc.glb')
   return (
     <group {...props} dispose={null}>
       <group scale={1.616}>
@@ -28,5 +28,5 @@ const TypeLogo=(props)=> {
   )
 }
 
-useGLTF.preload('/typsc.glb')
+useGLTF.preload('models/typsc.glb')
 export default TypeLogo

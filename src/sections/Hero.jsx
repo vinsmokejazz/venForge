@@ -10,6 +10,7 @@ import ReactLogo from "../components/ReactLogo"
 import StyleKeyBoard from "../components/StyleKeyBoard"
 import SolLogo from "../components/SolLogo"
 import NodeLogo from "../components/NodeLogo"
+import TypeLogo from "../components/TypeLogo"
 
 const Hero = () => {
 
@@ -85,9 +86,10 @@ const Hero = () => {
 
 
 <group>
-  <Target 
-    position={ismobile ? [-6, -1, 0] : isTablet ? [-9, -6, 2] : [-12, -10, 3]}
-    scale={ismobile ? 1 : isTablet ? 1.2 : 1.4}
+  <TypeLogo
+    position={ismobile ? [-6, -0.8, 0] : isTablet ? [-9, -6, 2] : [-12, -10, 3]}
+    rotation={[0,0,0.3]}
+    scale={ismobile ? 0.7 : isTablet ? 0.5 : 0.95}
   />
   <ambientLight intensity={-15} />
 
