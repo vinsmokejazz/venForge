@@ -87,9 +87,10 @@ const Hero = () => {
 
 <group>
   <TypeLogo
-    position={ismobile ? [-6, -0.8, 0] : isTablet ? [-9, -6, 2] : [-12, -10, 3]}
-    rotation={[0,0,0.3]}
-    scale={ismobile ? 0.7 : isTablet ? 0.5 : 0.95}
+    position={ismobile ? [-6, -0.8, 0] : isTablet ? [-9, -4.7, 2] : [-12, -9, 3]}
+    ismobile={ismobile}
+    isTablet={isTablet}
+    rotation={[0, Math.PI/4, 0]}
   />
   <ambientLight intensity={-15} />
 
