@@ -9,6 +9,7 @@ import Target from "../components/Target"
 import ReactLogo from "../components/ReactLogo"
 import StyleKeyBoard from "../components/StyleKeyBoard"
 import SolLogo from "../components/SolLogo"
+import NodeLogo from "../components/NodeLogo"
 
 const Hero = () => {
 
@@ -83,46 +84,60 @@ const Hero = () => {
             />
 
 
-            <group>
-              <Target position={ismobile ? [-6, -1, 0] :
-                isTablet ? [-9, -6, 2]
-                  : [-12, -10, 3]}
-                scale={ismobile ? 1 : isTablet ? 1.2 : 1.4}
-              />
-              <ambientLight intensity={-15} />
+<group>
+  <Target 
+    position={ismobile ? [-6, -1, 0] : isTablet ? [-9, -6, 2] : [-12, -10, 3]}
+    scale={ismobile ? 1 : isTablet ? 1.2 : 1.4}
+  />
+  <ambientLight intensity={-15} />
 
-              <ReactLogo position={
-                ismobile
-                  ? [6, 6, 5]
-                  : isTablet
-                    ? [10, 3.5, 5]
-                    : [15, 5, 5]
-              }
-                scale={ismobile ? 0.5 : isTablet ? 0.6 : 0.8} />
+  <ReactLogo 
+    position={ismobile ? [6, 6, 5] : isTablet ? [10, 3.5, 5] : [15, 5, 5]}
+    scale={ismobile ? 0.5 : isTablet ? 0.6 : 0.8}
+  />
 
-                <StyleKeyBoard position={
-                ismobile
-                  ? [6, 0, 5]
-                  : isTablet
-                    ? [10, 3.5, 5]
-                    : [15, -8, 5]
-              } rotation={[1,7,0]}
+  <StyleKeyBoard 
+    position={ismobile ? [6, 0, 5] : isTablet ? [10, -3.5, 5] : [15, -8, 5]}
+    rotation={[1, 7, 0]}
+    scale={ismobile ? 0.45 : isTablet ? 0.6 : 0.8}
+  />
 
-              scale={ismobile ? 0.5 : isTablet ? 0.6 : 0.8}
+  <SolLogo 
+    position={
+      ismobile 
+        ? [-3.1, 4.5, 5]  
+        : isTablet 
+        ? [-5, 2.5, 3]     
+        : [-7, 1, 1.5]    
+    }
+    rotation={[1.1, Math.PI/6, 0]}
+    scale={
+      ismobile 
+        ? 0.55 
+        : isTablet 
+        ? 0.8  
+        : 1.2
+    }
+  />
 
-                />
-
-                <SolLogo position={
-                ismobile
-                  ? [6, 0, 5]
-                  : isTablet
-                    ? [10, 3.5, 5]
-                    : [-5, -2, 1]
-              } rotation={[1,Math.PI/7,0]}
-              scale={ismobile ? 0.5 : isTablet ? 0.6 : 1.2}
-
-                />
-            </group>
+  <NodeLogo  
+    position={
+      ismobile 
+        ? [3.4, 2.5, 5]   
+        : isTablet 
+        ? [5, -1, 3]      
+        : [7, -3, 1]      
+    }
+    rotation={[0, 0, -0.5]}
+    scale={
+      ismobile 
+        ? 2.5
+        : isTablet 
+        ? 4   
+        : 5.3   
+    }
+  />
+</group>
 
             <ambientLight intensity={15} />
             <directionalLight position={[10, 10, 10]} intensity={4} />
