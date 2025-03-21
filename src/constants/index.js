@@ -1,3 +1,4 @@
+
 export const navLinks = [
   {
     id: 1,
@@ -253,11 +254,11 @@ export const calculateSizes = (isSmall, isMobile, isTablet) => {
 
   return {
     HackerRoom: {
-      scale: getResponsiveProp(2.3, 2.8, 3.5),
+      scale: getResponsiveProp(2.3, 2.8, 4),
       position: getResponsiveProp(
         [-0.3, 0, 0.3],
-        [-0.3, -3.5, 0.3],
-        [-0.3, -7, 0.3]
+        [-0.3, -5, 0.3],
+        [-0.3, -9, 0.3]
       ),
       rotation: [0, 5, 0]
     },

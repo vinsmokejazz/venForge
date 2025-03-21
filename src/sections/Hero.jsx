@@ -11,6 +11,7 @@ import NodeLogo from "../components/NodeLogo"
 import TypeLogo from "../components/TypeLogo"
 import Cube from "../components/Cube"
 import { calculateSizes } from "../constants"
+import HeroCamera from "../components/HeroCamera"
 
 const Hero = () => {
   const isSmall = useMediaQuery({ maxWidth: 480 }) // Added small screen detection
@@ -34,7 +35,10 @@ const Hero = () => {
           <Suspense fallback={<CanvasLoader />}>
             <PerspectiveCamera makeDefault position={[0, 0, 30]} />
             
+            <HeroCamera>
             <HackerRoom {...responsiveSizes.HackerRoom} />
+            </HeroCamera>
+            
 
             <group>
               <TypeLogo {...responsiveSizes.TypeLogo} />
