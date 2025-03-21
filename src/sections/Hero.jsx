@@ -12,6 +12,7 @@ import TypeLogo from "../components/TypeLogo"
 import Cube from "../components/Cube"
 import { calculateSizes } from "../constants"
 import HeroCamera from "../components/HeroCamera"
+import Button from "../components/Button"
 
 const Hero = () => {
   const isSmall = useMediaQuery({ maxWidth: 480 }) // Added small screen detection
@@ -54,6 +55,12 @@ const Hero = () => {
             <directionalLight position={[10, 10, 10]} intensity={4} />
           </Suspense>
         </Canvas>
+      </div>
+
+      <div className="absolute bottom-7 left-0 right-0 w-full z-10 c-space">
+      <a href="#about" className="w-fit">
+          <Button name="Let's work together" isBeam containerClass="sm:w-fit w-full sm:min-w-96" />
+        </a>
       </div>
     </section>
   )
