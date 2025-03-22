@@ -254,9 +254,9 @@ export const calculateSizes = (isSmall, isMobile, isTablet) => {
 
   return {
     HackerRoom: {
-      scale: getResponsiveProp(2.3, 2.8, 4),
+      scale: getResponsiveProp(3, 2.8, 4),
       position: getResponsiveProp(
-        [-0.3, 0, 0.3],
+        [-0.3, -4, 0.3],
         [-0.3, -5, 0.3],
         [-0.3, -9, 0.3]
       ),
@@ -264,7 +264,7 @@ export const calculateSizes = (isSmall, isMobile, isTablet) => {
     },
     TypeLogo: {
       position: getResponsiveProp(
-        [-7, -0.8, 0],
+        [-4.6, -8.5, 0],
         [-10, -4.7, 2],
         [-15, -9, 3]
       ),
@@ -272,7 +272,7 @@ export const calculateSizes = (isSmall, isMobile, isTablet) => {
     },
     ReactLogo: {
       position: getResponsiveProp(
-        [6, 6.9, 5],
+        [3.8, 5.2, 5],
         [10, 5.6, 5],
         [15, 5, 5]
       ),
@@ -280,16 +280,16 @@ export const calculateSizes = (isSmall, isMobile, isTablet) => {
     },
     StyleKeyBoard: {
       position: getResponsiveProp(
-        [6, -1, 5],
+        [4, -6.5, 5],
         [10, -3.5, 5],
         [15, -8, 5]
       ),
-      scale: getResponsiveProp(0.45, 0.6, 0.8),
+      scale: getResponsiveProp(0.5, 0.6, 0.8),
       rotation: [1, 7, 0]
     },
     SolLogo: {
       position: getResponsiveProp(
-        [-3.1, 4.5, 5],
+        [-3.5, 1.5, 5],
         [-5, 2.5, 3],
         [-7, 1, 1.5]
       ),
@@ -298,7 +298,7 @@ export const calculateSizes = (isSmall, isMobile, isTablet) => {
     },
     NodeLogo: {
       position: getResponsiveProp(
-        [3.4, 2.5, 5],
+        [3.4, 0, 5],
         [5, -1, 3],
         [7, -3, 1]
       ),
@@ -307,7 +307,7 @@ export const calculateSizes = (isSmall, isMobile, isTablet) => {
     },
     Cube: {
       position: getResponsiveProp(
-        [-6, 7.8, 5],
+        [-4, 6, 5],
         [-10, 6, 5],
         [-16, 5, 5]
       ),
