@@ -9,7 +9,7 @@
 ![GitHub forks](https://img.shields.io/github/forks/yourusername/portfolio)
 ![GitHub stars](https://img.shields.io/github/stars/yourusername/portfolio)
 ![GitHub license](https://img.shields.io/github/license/yourusername/portfolio)
-[![Live Demo](https://img.shields.io/badge/demo-live-brightgreen?style=for-the-badge)](https://your-portfolio-url.com)
+[![Live Demo](https://img.shields.io/badge/demo-live-brightgreen?style=for-the-badge)](https://ven-forge.vercel.app/)
 
 A modern 3D interactive portfolio showcasing my work, built with cutting-edge web technologies.
 
@@ -39,3 +39,6 @@ A modern 3D interactive portfolio showcasing my work, built with cutting-edge we
 1. Clone the repository:
 ```bash
 git clone https://github.com/vinsmokejazz/venForge.git 
+cd portfolio && npm install
+npm run dev
+
