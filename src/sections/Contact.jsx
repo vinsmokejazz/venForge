@@ -34,7 +34,7 @@ const Contact = () => {
         import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY,
       )
 
-      
+
       .then(
         () => {
           setLoading(false);
@@ -71,7 +71,7 @@ const Contact = () => {
       {alert.show && <Alert {...alert} />}
 
       <div className="relative min-h-screen flex items-center justify-center flex-col">
-       
+
 
         <div className="contact-container">
           <h3 className="head-text">Let's talk</h3>

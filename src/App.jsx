@@ -7,14 +7,14 @@ import Projects from "./sections/Projects"
 
 function App() {
   return (
-  <main className="max-w-7xl mx-auto">
-    <Navbar/>
-    <Hero/>
-    <About/>
-    <Projects/>
-    <Contact/>
-    <Footer/>
-  </main>
+    <main className="max-w-7xl mx-auto">
+      <Navbar />
+      <Hero />
+      <About />
+      <Projects />
+      <Contact />
+      <Footer />
+    </main>
   )
 }
 

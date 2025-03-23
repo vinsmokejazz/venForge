@@ -1,7 +1,7 @@
 import React, { useRef } from 'react'
 import { useGLTF, useAnimations, Float } from '@react-three/drei'
 
-const StyleKeyBoard=(props)=> {
+const StyleKeyBoard = (props) => {
   const group = useRef()
   const { nodes, materials, animations } = useGLTF('/models/stylized_keyboard.glb')
   const { actions } = useAnimations(animations, group)

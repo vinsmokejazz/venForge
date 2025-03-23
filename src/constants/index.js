@@ -101,8 +101,8 @@ export const myProjects = [
       },
     ],
   },
-  
-  
+
+
 ];
 
 export const calculateSizes = (isSmall, isMobile, isTablet) => {
@@ -126,7 +126,7 @@ export const calculateSizes = (isSmall, isMobile, isTablet) => {
         [-10, -4.7, 2],
         [-15, -9, 3]
       ),
-      rotation: [0, Math.PI/4, 0]
+      rotation: [0, Math.PI / 4, 0]
     },
     ReactLogo: {
       position: getResponsiveProp(
@@ -152,7 +152,7 @@ export const calculateSizes = (isSmall, isMobile, isTablet) => {
         [-7, 1, 1.5]
       ),
       scale: getResponsiveProp(0.7, 0.8, 1.2),
-      rotation: [1.1, Math.PI/6, 0]
+      rotation: [1.1, Math.PI / 6, 0]
     },
     NodeLogo: {
       position: getResponsiveProp(

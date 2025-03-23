@@ -33,19 +33,19 @@ const TypeLogo = (props) => {
   })
 
   return (
-    <Float 
+    <Float
       speed={2} // Reduced float speed
       rotationIntensity={0.5} // Less rotation
       floatIntensity={7} // Reduced float height
       ref={floatRef}
     >
-      <group 
-        {...props} 
-        ref={targetRef} 
-        dispose={null} 
+      <group
+        {...props}
+        ref={targetRef}
+        dispose={null}
         scale={responsiveScale}
       >
-        <mesh 
+        <mesh
           castShadow
           receiveShadow
           geometry={nodes.Cube033.geometry}

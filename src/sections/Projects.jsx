@@ -22,15 +22,15 @@ const Projects = () => {
 
       {/* Centered container */}
       <div className="flex justify-center">
-        <div className="mt-12 gap-5 w-full max-w-2xl relative"> 
+        <div className="mt-12 gap-5 w-full max-w-2xl relative">
           {/* Project Card */}
           <div className="flex flex-col gap-5 relative sm:p-8 p-6 shadow-2xl shadow-black-500 rounded-xl bg-dark-800">
             {/* Spotlight Image */}
             <div className="absolute top-0 right-0 w-full h-64 opacity-40">
-              <img 
-                src={currentProject.spotlight} 
-                alt="spotlight" 
-                className="w-full h-full object-cover rounded-xl" 
+              <img
+                src={currentProject.spotlight}
+                alt="spotlight"
+                className="w-full h-full object-cover rounded-xl"
               />
             </div>
 
@@ -68,13 +68,13 @@ const Projects = () => {
 
             {/* Navigation Arrows */}
             <div className="flex justify-between items-center mt-7">
-              <button 
+              <button
                 className="arrow-btn "
                 onClick={() => handleNavigation('previous')}
               >
                 <img src="/assets/left-arrow.png" alt="left arrow" className="w-5 h-5" />
               </button>
-              <button 
+              <button
                 className="arrow-btn "
                 onClick={() => handleNavigation('next')}
               >

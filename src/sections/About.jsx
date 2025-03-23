@@ -16,9 +16,9 @@ const About = () => {
         {/* Introduction Card */}
         <div className="xl:col-span-1 md:row-span-2">
           <div className="grid-container">
-            <img 
-              src="assets/grid1.png" 
-              alt="Venu Prasad - Full Stack & Blockchain Developer" 
+            <img
+              src="assets/grid1.png"
+              alt="Venu Prasad - Full Stack & Blockchain Developer"
               className="w-full sm:h-[276px] h-fit object-contain "
             />
             <h2 className="text-2xl font-bold bg-gradient-to-r from-purple-400 to-blue-500 bg-clip-text 
@@ -26,7 +26,7 @@ const About = () => {
               Hi, I'm Venu Prasad
             </h2>
             <p className="grid-subtext">
-              I'm a digital craftsman, fusing the power of the full stack with innovative blockchain 
+              I'm a digital craftsman, fusing the power of the full stack with innovative blockchain
               tech to create seamless, next-gen web experiences.
             </p>
           </div>
@@ -35,13 +35,13 @@ const About = () => {
         {/* Tech Stack Card */}
         <div className="xl:col-span-2 md:row-span-2">
           <div className="grid-container">
-            <img 
-              src="assets/grid2.png" 
-              alt="Tech Stack" 
+            <img
+              src="assets/grid2.png"
+              alt="Tech Stack"
               className="w-full sm:h-[276px] h-fit object-contain"
             />
-           
-           
+
+
             <h2 className="text-2xl font-bold bg-gradient-to-r from-yellow-500 to-cyan-400 bg-clip-text text-transparent">
               Tech Arsenal
             </h2>
@@ -56,17 +56,17 @@ const About = () => {
         {/* Passion Card */}
         <div className="xl:col-span-2 md:row-span-2">
           <div className="grid-container">
-            <img 
-              src="assets/grid3.png" 
-              alt="Creative Passion - Coding, Art, 3D Modeling" 
+            <img
+              src="assets/grid3.png"
+              alt="Creative Passion - Coding, Art, 3D Modeling"
               className="w-full sm:h-[276px] h-fit object-contain"
             />
             <h2 className="text-2xl font-bold bg-gradient-to-r to-orange-400 from-pink-500 bg-clip-text text-transparent">
               Creative Fusion
             </h2>
             <p className="text-gray-400 text-justify">
-              I blend technical expertise with artistic expression through coding, 3D modeling, 
-              and digital art. Constantly exploring the synergy between blockchain innovation 
+              I blend technical expertise with artistic expression through coding, 3D modeling,
+              and digital art. Constantly exploring the synergy between blockchain innovation
               and creative design, I bring imagination to every project.
             </p>
           </div>
@@ -88,9 +88,9 @@ const About = () => {
                          hover:bg-dark-700 focus:outline-none focus:ring-2 focus:ring-purple-500"
                 aria-label="Copy email address"
               >
-                <img 
-                  src={hasCopied ? 'assets/tick.svg' : 'assets/copy.svg'} 
-                  alt={hasCopied ? "Email copied" : "Copy email"} 
+                <img
+                  src={hasCopied ? 'assets/tick.svg' : 'assets/copy.svg'}
+                  alt={hasCopied ? "Email copied" : "Copy email"}
                   className="h-5 w-5 transition-transform hover:scale-110"
                 />
                 <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent

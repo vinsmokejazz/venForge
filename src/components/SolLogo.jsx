@@ -2,7 +2,7 @@
 import React, { useRef } from 'react'
 import { Float, useGLTF } from '@react-three/drei'
 
-const SolLogo=(props)=> {
+const SolLogo = (props) => {
   const { nodes, materials } = useGLTF('/models/solana.glb')
   return (
     <Float{...props} dispose={null} floatIntensity={3}>

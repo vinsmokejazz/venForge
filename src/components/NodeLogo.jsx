@@ -1,7 +1,7 @@
 import React, { useRef } from 'react'
 import { Float, useGLTF } from '@react-three/drei'
 
-const NodeLogo=(props)=>{
+const NodeLogo = (props) => {
   const { nodes, materials } = useGLTF('/models/node.glb')
   return (
     <Float {...props} dispose={null} floatIntensity={1.5}>
